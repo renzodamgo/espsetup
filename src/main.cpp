@@ -76,18 +76,17 @@ void setup() {
 }
 
 void loop() {
-
   BLKServo servos[2];   
   
   servos[0].ID = 3;       
-  servos[0].Position = 0;  
+  servos[0].Position = 500;  
 
-  moveServos(servos, sizeof(servos),2000);  
+  moveServos(servos, sizeof(servos), 500);  
   delay(600);  
 
   servos[0].ID = 3;       
   servos[0].Position = 1000;  
 
-  moveServos(servos, sizeof(servos), 2000);  
+  moveServos(servos, sizeof(servos), 500);  
   delay(600);
 }
