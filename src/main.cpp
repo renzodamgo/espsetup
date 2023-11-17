@@ -76,17 +76,8 @@ void setup() {
 }
 
 void loop() {
-  BLKServo servos[2];   
-  
-  servos[0].ID = 3;       
-  servos[0].Position = 500;  
-
-  moveServos(servos, sizeof(servos), 500);  
-  delay(600);  
-
-  servos[0].ID = 3;       
-  servos[0].Position = 1000;  
-
-  moveServos(servos, sizeof(servos), 500);  
-  delay(600);
+  if (ps5.Right()) Serial.println("Right Button");
+  if (ps5.Down()) Serial.println("Down Button");
+  if (ps5.Up()) Serial.println("Up Button");
+  if (ps5.Left()) Serial.println("Left Button");
 }
